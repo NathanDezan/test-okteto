@@ -1,0 +1,10 @@
+[
+  {
+    "name": "ip_entity",
+    "pattern": "(\\b1\\.33\\.213\\.199\\b|\\b1\\.33\\.213\\.226\\b|\\b102\\.165\\.46\\.0\\b|\\b103\\.210\\.12\\.0\\b|\\b103\\.4\\.96\\.110\\b|\\b103\\.4\\.96\\.18\\b|\\b103\\.4\\.96\\.202\\b|\\b103\\.4\\.96\\.208\\b|\\b103\\.4\\.96\\.214\\b|\\b103\\.4\\.96\\.236\\b|\\b103\\.4\\.96\\.250\\b|\\b103\\.4\\.96\\.70\\b|\\b103\\.4\\.97\\.184\\b|\\b103\\.4\\.97\\.208\\b|\\b103\\.4\\.97\\.218\\b|\\b103\\.4\\.97\\.34\\b|\\b103\\.4\\.97\\.58\\b|\\b103\\.4\\.98\\.126\\b|\\b103\\.4\\.98\\.168\\b|\\b103\\.4\\.98\\.200\\b|\\b103\\.4\\.98\\.224\\b)"
+  },
+  {
+    "name": "name_entity",
+    "pattern": "(\\bMaria\\ Eduarda\\b|\\bEsther\\b|\\bPaloma\\b|\\bZoe\\b|\\bDaniel\\b|\\bAlice\\b|\\bIsabella\\b|\\bManuela\\b|\\bMaria\\ Eduarda\\b|\\bBeatriz\\b|\\bHeloísa\\b|\\bLívia\\b|\\bLorena\\b|\\bIsadora\\b|\\bRafaela\\b|\\bIsabelly\\b|\\bCecília\\b|\\bVitória\\b|\\bBianca\\b|\\bAlice\\b|\\bLuisa\\b|\\bHeloísa\\b|\\bLívia\\b|\\bBianca\\b|\\bIsis\\b|\\bAurora\\b|\\bPietra\\b|\\bMaria\\b|\\bCamila\\b|\\bEster\\b|\\bBruna\\b|\\bÍris\\b|\\bAmanda\\b|\\bOlívia\\b|\\bAline\\b|\\bMaísa\\b|\\bAriela\\b|\\bIara\\b|\\bBrenda\\b|\\bDébora\\b|\\bJoana\\b|\\bJuliana\\b|\\bKaren\\b|\\bSabrina\\b|\\bIngrid\\b|\\bAngelina\\b|\\bMilene\\b|\\bFlôr\\b|\\bMiguel\\b|\\bDavi\\b|\\bHeitor\\b|\\bLorenzo\\b|\\bGuilherme\\b|\\bJoão\\ Pedro\\b|\\bVitor\\b|\\bEduardo\\b|\\bPietro\\b|\\bIsaac\\b|\\bJoaquim\\b|\\bCaio\\b|\\bVinicius\\b|\\bFrancisco\\b|\\bEnzo\\ Gabriel\\b|\\bDavi\\ Lucca\\b|\\bThomas\\b|\\bEmanuel\\b|\\bEnrico\\b|\\bBernardo\\b|\\bLorenzo\\b|\\bHeitor\\b|\\bBenjamim\\b|\\bGabriel\\b|\\bPedro\\b|\\bHenrique\\b|\\bGustavo\\b|\\bMateus\\b|\\bDavid\\b|\\bDaniel\\b|\\bJoaquim\\b|\\bEduardo\\b|\\bSamuel\\b|\\bLeonardo\\b|\\bBruno\\b|\\bAugusto\\b|\\bTiago\\b|\\bEmanuel\\b|\\bMartim\\b|\\bRodrigo\\b|\\bKelvin\\b|\\bRenan\\b|\\bRicardo\\b|\\bAquiles\\b|\\bPaulo\\b|\\bDouglas\\b|\\bCarlos\\b|\\bCésar\\b|\\bFábio\\b|\\bFabrício\\b|\\bMarcos\\b|\\bAbraão\\b|\\bJonas\\b|\\bRenato\\b|\\bAdriano\\b|\\bMichael\\b|\\bAnderson\\b|\\bBruna\\b)"
+  }
+]

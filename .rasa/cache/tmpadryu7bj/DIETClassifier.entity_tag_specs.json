@@ -1,0 +1,28 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-ip_entity",
+      "2": "I-ip_entity",
+      "3": "L-ip_entity",
+      "4": "U-ip_entity",
+      "5": "B-name_entity",
+      "6": "I-name_entity",
+      "7": "L-name_entity",
+      "8": "U-name_entity",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-ip_entity": 1,
+      "I-ip_entity": 2,
+      "L-ip_entity": 3,
+      "U-ip_entity": 4,
+      "B-name_entity": 5,
+      "I-name_entity": 6,
+      "L-name_entity": 7,
+      "U-name_entity": 8,
+      "O": 0
+    },
+    "num_tags": 9
+  }
+]
