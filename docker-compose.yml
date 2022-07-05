@@ -19,6 +19,7 @@ services:
       - --credentials
       - credentials.yml
       - --debug
+      - -p 5056
   container-rasa-action:
     build:
       context: .
