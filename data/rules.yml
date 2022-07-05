@@ -1,0 +1,8 @@
+version: "3.0"
+
+rules:
+
+- rule: faq who am i
+  steps:
+  - intent: int_faq_who_am_i
+  - action: utter_faq_who_am_i

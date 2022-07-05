@@ -1,0 +1,141 @@
+version: "3.0"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_request_name
+  - intent: int_info_name
+  - action: utter_request_ip
+  - intent: int_info_ip
+  - action: action_ip
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_request_name
+  - intent: int_info_name
+    entities:
+    - name_entity: Nathan
+  - slot_was_set:
+    - name_entity: Nathan
+  - action: utter_request_ip
+  - intent: int_info_ip
+    entities:
+    - ip_entity: 85.240.0.0
+  - slot_was_set:
+    - ip_entity: 85.240.0.0
+  - action: action_ip
+  - intent: int_new_request
+  - action: action_reset_slot
+  - action: utter_request_ip
+  - intent: int_info_ip
+    entities:
+    - ip_entity: 187.95.8.85
+  - slot_was_set:
+    - ip_entity: 187.95.8.85
+  - action: action_ip
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_1
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: greet
+  - action: utter_greet
+  - action: utter_request_name
+  - intent: int_info_name
+    entities:
+    - name_entity: Jose
+  - slot_was_set:
+    - name_entity: Jose
+  - action: utter_request_ip
+  - intent: int_info_ip
+    entities:
+    - ip_entity: 82.132.186.92
+  - slot_was_set:
+    - ip_entity: 82.132.186.92
+  - action: action_ip
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_request_name
+  - intent: int_info_ip
+    entities:
+    - ip_entity: 82.132.186.92
+  - slot_was_set:
+    - ip_entity: 82.132.186.92
+  - action: utter_request_name
+  - intent: int_info_name
+    entities:
+    - name_entity: Renato
+  - slot_was_set:
+    - name_entity: Renato
+  - action: action_ip
+  - intent: int_new_request
+  - action: action_reset_slot
+  - action: utter_request_ip
+  - intent: int_info_ip
+    entities:
+    - ip_entity: 187.95.8.85
+  - slot_was_set:
+    - ip_entity: 187.95.8.85
+  - action: action_ip
+
+- story: interactive_story_1
+  steps:
+  - intent: int_info_name
+    entities:
+    - name_entity: Rafael
+  - slot_was_set:
+    - name_entity: Rafael
+  - action: utter_request_ip
+  - intent: int_info_ip
+    entities:
+    - ip_entity: 82.132.186.92
+  - slot_was_set:
+    - ip_entity: 82.132.186.92
+  - action: action_ip
+
+- story: interactive_story_1
+  steps:
+  - intent: int_request_service
+  - action: utter_request_name
+  - intent: int_info_name
+    entities:
+    - name_entity: Sophia
+  - slot_was_set:
+    - name_entity: Sophia
+  - action: utter_request_ip
+  - intent: int_info_ip
+    entities:
+    - ip_entity: 82.132.186.92
+  - slot_was_set:
+    - ip_entity: 82.132.186.92
+  - action: action_ip
+
+- story: interactive_story_1
+  steps:
+  - intent: int_info_ip
+    entities:
+    - ip_entity: 187.95.8.85
+  - slot_was_set:
+    - ip_entity: 187.95.8.85
+  - action: utter_request_name
+  - intent: int_info_name
+    entities:
+    - name_entity: Henrique
+  - slot_was_set:
+    - name_entity: Henrique
+  - action: action_ip

@@ -1,0 +1,60 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 1000
+  carry_over_slots_to_new_session: true
+intents:
+- int_info_name
+- int_info_ip
+- int_new_request
+- int_request_service
+- int_faq_who_am_i
+- greet
+- goodbye
+entities:
+- ip_entity
+- name_entity
+slots:
+  ip_entity:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: ip_entity
+  name_entity:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name_entity
+responses:
+  utter_greet:
+  - text: Olá! Sou o MonguinhoBot.
+  - text: Como vai? Me chamo Monguinho.
+  utter_request_ip:
+  - text: Qual o endereço IP?
+  - text: Poderia me informar o IP?
+  - text: Qual o IP para que consiga realizar a busca?
+  utter_request_name:
+  - text: Qual seu nome?
+  - text: Como você se chama?
+  - text: Poderia informar o seu nome?
+  utter_goodbye:
+  - text: Até mais! Espero ter ajudado.
+  - text: Adeus! Te vejo em breve :).
+  utter_request_service:
+  - text: Caso deseje realizar uma nova pesquisa, pode me informar :).
+  - text: Deseja realizar uma nova busca? Basta me informar.
+  utter_faq_who_am_i:
+  - text: Me chamo Monguinho :), e fui desenvolvido para retornar informações geograficas sobre seu endereço IP.
+  - text: Fui desenvolvido para retornar informações geograficas sobre seu endereço IP.
+  - text: Sou um chatbot desenvolvido para retornar informações sobre seu IP.
+  - text: Meu nome é Monguinho :). E sou um chatbot desenvolvido para retornar informações sobre seu endereço IP.
+actions:
+- action_ip
+- action_reset_slot
+- utter_goodbye
+- utter_greet
+- utter_request_ip
+- utter_request_name
+- utter_request_service
+- utter_faq_who_am_i

@@ -1,0 +1,50 @@
+recipe: default.v1
+
+#Configuração para o NLU
+language: pt
+
+pipeline:
+  - name: SpacyNLP
+    #Pacote em portugues para o Spacy
+    model: pt_core_news_lg
+    #Realiza a tokenização dos inputs
+  - name: SpacyTokenizer
+    #Cria um vetor com a resposta do usuário
+  - name: SpacyFeaturizer
+    pooling: mean
+    #Cria uma vetor dos inputs a partir de expressões regulares
+  - name: RegexFeaturizer
+    case_sensitive: False
+    #Cria recursos para auxiliar no processo de extração de entitidades
+  - name: LexicalSyntacticFeaturizer
+    #Cria uma representação de pacote para palavras intenções e entradas do usuário
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+    #Usado para classificação de intents e extração de entidades
+  - name: DIETClassifier
+    epochs: 100
+    constrain_similarities: true
+    #Mapeia valores de entidades sinônimas com o mesmo valor
+  - name: EntitySynonymMapper
+    #Os seletores prevêem uma resposta do bot a partir de um conjunto de respostas candidatas
+  - name: ResponseSelector
+    epochs: 100
+    constrain_similarities: true
+    #Classifica uma mensagem com a intenção nlu_fallbackse as pontuações de classificação de intenção da NLU forem ambíguas
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+#Configuração do rasa core
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: UnexpecTEDIntentPolicy
+    max_history: 5
+    epochs: 100
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100
+    constrain_similarities: true

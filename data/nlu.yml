@@ -1,0 +1,312 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - Hey
+    - Oi
+    - Ola
+    - Como vai?
+    - Bom dia
+    - Boa tarde
+    - Ola, tudo bem?
+    - Oi, como vai?
+    - Opa
+    - Oiiiii
+    - Oieee
+- intent: goodbye
+  examples: |
+    - Até mais
+    - Até logo
+    - Te vejo mais tarde
+    - Boa noite
+    - Adeus
+    - Xau
+    - Tenha um ótimo dia
+    - Tchau
+    - Tchau tchau
+    - Muito obrigado!
+    - Muito obrigado, Monguinho!
+    - Até mais!
+- intent: int_request_service
+  examples: |
+    - Gostaria de saber a localização de meu ip
+    - Qual o endereço do meu IP?
+    - Qual as informações do meu endereço lógico
+    - Qual a localização do meu endereço ip
+    - Quero uma ajuda
+    - Preciso de ajuda
+    - Preciso de algumas informações sobre meu ip
+    - Preciso de informações sobre meu ip
+    - Gostaria do endereço de meu ip
+    - Informações sobre meu ip
+    - Quero informações sobre meu ip
+    - Ve para mim o seguinte endereço ip
+    - Qual as informações sobre o ip
+    - Veja se encontra informações sobre esse IP
+    - Tenta com esse ip agora
+    - Pesquisa para mim para o ip
+    - Busca para o endereço lógico
+    - Vê para o ip
+- intent: int_faq_who_am_i
+  examples: |
+    - Para que você foi projetado?
+    - Quem é você Monguinho?
+    - Pra que você serve
+    - Qual sua função?
+    - Qual sua utilidade?
+- intent: int_info_name
+  examples: |
+    - Meu nome é [jorge](name_entity)
+    - Meu nome é [matheus](name_entity)
+    - Meu nome é [nathan](name_entity)
+    - Meu nome é [miguel](name_entity)
+    - Meu nome é [arthur](name_entity)
+    - Meu nome é [gael](name_entity)
+    - Meu nome é [heitor](name_entity)
+    - Meu nome é [helena](name_entity)
+    - Meu nome é [alice](name_entity)
+    - Meu nome é [theo](name_entity)
+    - Meu nome é [laura](name_entity)
+    - Meu nome é [davi](name_entity)
+    - Meu nome é [gabriel](name_entity)
+    - Meu nome é [maria alice](name_entity)
+    - Meu nome é [valentina](name_entity)
+    - Meu nome é [heloísa](name_entity)
+    - Meu nome é [maria clara](name_entity)
+    - Meu nome é [maria julia](name_entity)
+    - Meu nome é [sophia](name_entity)
+    - Meu nome é [Nathan](name_entity)
+    - Me chamo [jorge](name_entity)
+    - Me chamo [matheus](name_entity)
+    - Me chamo [nathan](name_entity)
+    - Me chamo [miguel](name_entity)
+    - Me chamo [arthur](name_entity)
+    - Me chamo [gael](name_entity)
+    - Me chamo [heitor](name_entity)
+    - Me chamo [helena](name_entity)
+    - Me chamo [alice](name_entity)
+    - Me chamo [theo](name_entity)
+    - Me chamo [laura](name_entity)
+    - Me chamo [davi](name_entity)
+    - Me chamo [gabriel](name_entity)
+    - Me chamo [maria alice](name_entity)
+    - Me chamo [valentina](name_entity)
+    - Me chamo [heloísa](name_entity)
+    - Me chamo [maria clara](name_entity)
+    - Me chamo [maria julia](name_entity)
+    - Me chamo [sophia](name_entity)
+    - Me chamo [Nathan](name_entity)
+    - [Jorge](name_entity)
+    - [Matheus](name_entity)
+    - [Nathan](name_entity)
+    - [Miguel](name_entity)
+    - [Arthur](name_entity)
+    - [Gael](name_entity)
+    - [Heitor](name_entity)
+    - [Helena](name_entity)
+    - [Alice](name_entity)
+    - [Theo](name_entity)
+    - [Laura](name_entity)
+    - [Davi](name_entity)
+    - [Gabriel](name_entity)
+    - [Maria alice](name_entity)
+    - [Valentina](name_entity)
+    - [Heloísa](name_entity)
+    - [Maria clara](name_entity)
+    - [Maria julia](name_entity)
+    - [Sophia](name_entity)
+    - [Leonardo](name_entity)
+    - [Biazom](name_entity)
+    - Meu nome é [Biazom](name_entity)
+    - Me chamo [Jose](name_entity)
+    - Me chamo [Renato](name_entity)
+    - Meu nome é [Rafael](name_entity)
+    - me chamo [Sophia](name_entity)
+    - Me chamo [Daniel](name_entity)
+    - Meu nome é [Henrique](name_entity)
+    - Me chamo [Lucas](name_entity)
+    - [Lucas](name_entity)
+    - Meu nome é [Lucas](name_entity)
+- intent: int_info_ip
+  examples: |
+    - [000.000.000.000](ip_entity)
+    - [94.60.0.0](ip_entity)
+    - [187.95.14.130](ip_entity)
+    - [191.222.200.224](ip_entity)
+    - [188.78.104.83](ip_entity)
+    - [84.14.49.249](ip_entity)
+    - [192.168.0.0](ip_entity)
+    - [192.168.0.1](ip_entity)
+    - [80.20.100.230](ip_entity)
+    - [20.100.320.10](ip_entity)
+    - Meu ip é [000.000.000.000](ip_entity)
+    - Meu ip é [94.60.0.0](ip_entity)
+    - Meu ip é [187.95.14.130](ip_entity)
+    - Meu ip é [191.222.200.224](ip_entity)
+    - Meu ip é [188.78.104.83](ip_entity)
+    - Meu ip é [84.14.49.249](ip_entity)
+    - Meu ip é [192.168.0.0](ip_entity)
+    - Meu ip é [192.168.0.1](ip_entity)
+    - Meu ip é [80.20.100.230](ip_entity)
+    - Meu ip é [20.100.320.10](ip_entity)
+    - Segue meu ip [000.000.000.000](ip_entity)
+    - Segue meu ip [94.60.0.0](ip_entity)
+    - Segue meu ip [187.95.14.130](ip_entity)
+    - Segue meu ip [191.222.200.224](ip_entity)
+    - Segue meu ip [188.78.104.83](ip_entity)
+    - Segue meu ip [84.14.49.249](ip_entity)
+    - Segue meu ip [192.168.0.0](ip_entity)
+    - Segue meu ip [192.168.0.1](ip_entity)
+    - Segue meu ip [80.20.100.230](ip_entity)
+    - Segue meu ip [20.100.320.10](ip_entity)
+    - [20.320.100.10](ip_entity)
+    - Meu endereço ip é [187.95.8.85](ip_entity)
+    - [85.240.0.0](ip_entity)
+    - [187.95.8.85](ip_entity)
+    - Meu endereço IP: [82.132.186.92](ip_entity)
+    - Meu endereço ip é esse [82.132.186.92](ip_entity)
+    - toma [82.132.186.92](ip_entity)
+    - [82.132.186.92](ip_entity)
+    - [103.4.98.224](ip_entity)
+    - [187.95.8.85](ip_entity)
+- intent: int_new_request
+  examples: |
+    - Gostaria de realizar outra pesquisa
+    - Verifique outro endereço IP
+    - Testa com esse outro endereço IP
+    - Quero realizar uma nova pesquisa
+    - Quero testar outro ip
+    - Quero realizar outra busca
+    - E para o seguinte ip?
+    - Quero realizar uma nova busca
+- lookup: ip_entity
+  examples: |
+    - 1.33.213.199
+    - 1.33.213.226
+    - 102.165.46.0
+    - 103.210.12.0
+    - 103.4.96.110
+    - 103.4.96.18
+    - 103.4.96.202
+    - 103.4.96.208
+    - 103.4.96.214
+    - 103.4.96.236
+    - 103.4.96.250
+    - 103.4.96.70
+    - 103.4.97.184
+    - 103.4.97.208
+    - 103.4.97.218
+    - 103.4.97.34
+    - 103.4.97.58
+    - 103.4.98.126
+    - 103.4.98.168
+    - 103.4.98.200
+    - 103.4.98.224
+- lookup: name_entity
+  examples: |
+    - Maria Eduarda
+    - Esther
+    - Paloma
+    - Zoe
+    - Daniel
+    - Alice
+    - Isabella
+    - Manuela
+    - Maria Eduarda
+    - Beatriz
+    - Heloísa
+    - Lívia
+    - Lorena
+    - Isadora
+    - Rafaela
+    - Isabelly
+    - Cecília
+    - Vitória
+    - Bianca
+    - Alice
+    - Luisa
+    - Heloísa
+    - Lívia
+    - Bianca
+    - Isis
+    - Aurora
+    - Pietra
+    - Maria
+    - Camila
+    - Ester
+    - Bruna
+    - Íris
+    - Amanda
+    - Olívia
+    - Aline
+    - Maísa
+    - Ariela
+    - Iara
+    - Brenda
+    - Débora
+    - Joana
+    - Juliana
+    - Karen
+    - Sabrina
+    - Ingrid
+    - Angelina
+    - Milene
+    - Flôr
+    - Miguel
+    - Davi
+    - Heitor
+    - Lorenzo
+    - Guilherme
+    - João Pedro
+    - Vitor
+    - Eduardo
+    - Pietro
+    - Isaac
+    - Joaquim
+    - Caio
+    - Vinicius
+    - Francisco
+    - Enzo Gabriel
+    - Davi Lucca
+    - Thomas
+    - Emanuel
+    - Enrico
+    - Bernardo
+    - Lorenzo
+    - Heitor
+    - Benjamim
+    - Gabriel
+    - Pedro
+    - Henrique
+    - Gustavo
+    - Mateus
+    - David
+    - Daniel
+    - Joaquim
+    - Eduardo
+    - Samuel
+    - Leonardo
+    - Bruno
+    - Augusto
+    - Tiago
+    - Emanuel
+    - Martim
+    - Rodrigo
+    - Kelvin
+    - Renan
+    - Ricardo
+    - Aquiles
+    - Paulo
+    - Douglas
+    - Carlos
+    - César
+    - Fábio
+    - Fabrício
+    - Marcos
+    - Abraão
+    - Jonas
+    - Renato
+    - Adriano
+    - Michael
+    - Anderson
+    - Bruna

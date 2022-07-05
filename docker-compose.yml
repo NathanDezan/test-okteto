@@ -1,0 +1,30 @@
+version: "3.0"
+services:
+  container-rasa-shell:
+    build:
+      context: .
+      dockerfile: rasa-shell.dockerfile
+    ports:
+      - 5005:5005
+    depends_on:
+      - container-rasa-action
+    volumes:
+      - ./:/app
+    public: true
+    command:
+      - run
+      - --enable-api
+      - --cors
+      - "*"
+      - --credentials
+      - credentials.yml
+      - --debug
+  container-rasa-action:
+    build:
+      context: .
+      dockerfile: rasa-actions.dockerfile
+    image: rasa-actions:latest
+    ports:
+      - 5055:5055
+    volumes:
+      - ./actions:/app/actions
