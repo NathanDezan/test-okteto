@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: rasa-shell.dockerfile
     ports:
-      - 5005:5056
+      - 5005:5005
     depends_on:
       - container-rasa-action
     volumes:
@@ -19,7 +19,7 @@ services:
       - --credentials
       - credentials.yml
       - --debug
-      - -p 5056
+      - -p 5005
   container-rasa-action:
     build:
       context: .
